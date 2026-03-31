@@ -16,10 +16,10 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            UserSeeder::class,      // Сначала пользователи (работодатели и соискатели)
-            VacancySeeder::class,   // Затем вакансии (ссылаются на работодателей)
-            ResponseSeeder::class,  // Отклики (ссылаются на пользователей и вакансии)
-            FavoriteSeeder::class,  // Избранное (ссылаются на пользователей и вакансии)
+            UserSeeder::class,      // Пользователи
+            VacancySeeder::class,   // Вакансии
+            ResponseSeeder::class,  // Отклики
+            FavoriteSeeder::class,  // Избранное
         ]);
     }
 }

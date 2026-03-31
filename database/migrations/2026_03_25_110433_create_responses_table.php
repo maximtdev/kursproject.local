@@ -22,7 +22,6 @@ return new class extends Migration
             $table->enum('status', ['submitted', 'viewed', 'invited', 'rejected'])->default('submitted');
             $table->timestamp('applied_at')->useCurrent();
             $table->timestamps();
-
             $table->unique(['user_id', 'vacancy_id']);
         });
     }

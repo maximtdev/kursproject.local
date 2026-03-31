@@ -12,9 +12,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('vacancy_id')->constrained('vacancies')->onDelete('cascade');
-            $table->timestamp('created_at')->useCurrent();
-
             $table->unique(['user_id', 'vacancy_id']);
+            $table->timestamps();
         });
     }
 
