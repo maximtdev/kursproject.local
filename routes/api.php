@@ -8,6 +8,9 @@ use App\Http\Controllers\ResponseController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\EmployerController;
 
+// "token": "1|r0WnBKJBekMorkw2KrGNWhWXuV6fM9q4ckGWTja7f1395314" - Токен работодателя
+// "token": "2|6IACSejWZRGz0k6gpy04gkDidD72q0Mf6xwG4s4N491c2e1e" - токен соискателя
+
 Route::prefix('auth')->group(function () {
     Route::post('register', [AuthController::class, 'register']);
     Route::post('login', [AuthController::class, 'login']);
